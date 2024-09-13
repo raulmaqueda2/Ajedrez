@@ -11,10 +11,8 @@ require '../funciones/guardarMovimiento.php';
 require '../funciones/setBaseDatos.php';
 require '../funciones/resetTabla.php';
 require '../funciones/setCokies.php';
-require '../funciones/comprobarSession.php';
 
-comprobarSession();
-resetTabla("online.php", 2);
+resetTabla("online.php",2);
 $resultado = moverFicha(2, "online.php");
 $tabla = $resultado[0];
 $menssaje = $resultado[1];
@@ -23,9 +21,9 @@ $turno = cambioTurno(false, 2, "online.php")
 ?>
 
 <body>
-    <a href="../inicio/inicio.php">Regresar</a>
+    <a href="../">Regresar</a>
     <form action="" method="get">
-        <p>Bienvenido <?php print($_COOKIE['usuario']) ?></p>
+        <p>Bienvenido</p>
         <div class="Juego">
             <div class="turno">
                 <div>
@@ -105,7 +103,6 @@ $turno = cambioTurno(false, 2, "online.php")
         justify-content: center;
 
     }
-
     button {
         font-size: 7vh;
         /* transform: rotate(0deg);*/

@@ -11,9 +11,7 @@ require '../funciones/setMensaje.php';
 require '../funciones/guardarMovimiento.php';
 require '../funciones/resetTabla.php';
 require '../funciones/reyHacke.php';
-require '../funciones/comprobarSession.php';
 
-comprobarSession();
 $color = reyHacke();
 print("<h1>$possicion</h1>");
 resetTabla("ia.php",1);
@@ -26,7 +24,7 @@ $turno = cambioTurno(false, 1, "ia.php")
 ?>
 
 <body>
-    <a href="../inicio/inicio.php">Regresar</a>
+    <a href="../">Regresar</a>
     <form action="" method="get">
         <p>Bienvenido</p>
         <div class="Juego">
@@ -80,6 +78,7 @@ $turno = cambioTurno(false, 1, "ia.php")
 
     }
 
+    
     .turno {
         flex: 1;
     }

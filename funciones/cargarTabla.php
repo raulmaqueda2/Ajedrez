@@ -34,11 +34,16 @@ function cargarTabla($donde)
             $primer_dato = mysqli_fetch_assoc($tab);
             mysqli_free_result($tab);
     
+            /*print_r($primer_dato);*/
+            /*$stmt = mysqli_query($base_datos, $del);*/
+            /*$tabla =*/
     
             $tablas = json_decode($primer_dato['tabla'], true);
             $tabla = $tablas;
             $tabla = array_map('unicode_to_char', $tabla);
+            /*
     
+            $tabla = json_decode($_COOKIE['tabla'], true);*/
         }
     }
     return $tabla;

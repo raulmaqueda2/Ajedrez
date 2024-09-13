@@ -10,10 +10,8 @@ require '../funciones/dentroTabla.php';
 require '../funciones/setMensaje.php';
 require '../funciones/guardarMovimiento.php';
 require '../funciones/resetTabla.php';
-require '../funciones/comprobarSession.php';
 
-comprobarSession();
-resetTabla("offline.php", 1);
+resetTabla("offline.php",1);
 $resultado = moverFicha(1, "offline.php");
 $tabla = $resultado[0];
 $menssaje = $resultado[1];
@@ -22,9 +20,9 @@ $turno = cambioTurno(false, 1, "offline.php")
 ?>
 
 <body>
-    <a href="../inicio/inicio.php">Regresar</a>
+    <a href="../">Regresar</a>
     <form action="" method="get">
-        <p>Bienvenido <?php print($_COOKIE['usuario']) ?></p>
+        <p>Bienvenido</p>
         <div class="Juego">
             <div class="turno">
                 <div>
@@ -148,7 +146,8 @@ $turno = cambioTurno(false, 1, "offline.php")
     }
     ");
     }
-    ?>#No_mov {
+    ?>
+    #No_mov{
         transform: rotate(0deg);
     }
 </style>
